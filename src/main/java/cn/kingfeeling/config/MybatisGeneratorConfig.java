@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * @author zemal-tan
- * @description mybatis自动生成类
+ * @description mybatis 通过类的方式自动生成, mapper(java) mapper(xml) dao 等文件 .
  * @create 2017-07-30 23:29:29.
  */
 public class MybatisGeneratorConfig {
@@ -21,7 +21,7 @@ public class MybatisGeneratorConfig {
         List<String> warnings = new ArrayList<String>();
         boolean overwrite = true;
         //指定 逆向工程配置文件
-        File configFile = new File("generatorConfig-translate.xml");
+        File configFile = new File("src/main/resources/generatorConfig.xml");
         ConfigurationParser cp = new ConfigurationParser(warnings);
         Configuration config = cp.parseConfiguration(configFile);
         DefaultShellCallback callback = new DefaultShellCallback(overwrite);
